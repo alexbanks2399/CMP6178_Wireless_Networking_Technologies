@@ -1,6 +1,7 @@
-import subprocess
 from csv import writer
+import subprocess
 import datetime
+import time
 
 start_time = datetime.datetime.now()
 print("Start time: ", start_time.strftime("%Y-%m-%d , %H:%M:%S"))
@@ -76,3 +77,4 @@ while True:
     output_list = (bssid, channel, client_rssi, time_now, loop_end_time, total_time_taken)
 
     append_list_as_row('output.csv', output_list)
+    time.sleep(1)
